@@ -514,12 +514,18 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  background-color: #90EE90  ;
+}
+.resume .section-title h2 {
+  color: #254117
+}
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #45505b;
+  color: #254117
 }
 
 .resume .resume-item {
