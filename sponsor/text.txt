@@ -1,0 +1,36 @@
+h1{
+    color: #272727;
+    text-align: center;
+    font-size: 3.125rem;
+    font-family: Press Start 2P;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Sponsorflex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    width: 108rem;
+    height: 38.9375rem;
+    padding: 7.6875rem 19.5625rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo{
+    width: 18.875rem;
+    height: 5.1875rem;
+    flex-shrink: 0;
+}
+
+
+<div class="Sponsorflex">
+                        <div class="logo"><img src="assets/img/LOGO.png" alt=".hack logo"></div>
+                        <div class="logo"><img src="assets/img/LOGO.png" alt=".hack logo"></div>
+                        <div class="logo"><img src="assets/img/LOGO.png" alt=".hack logo"></div>
+                        <div class="logo"><img src="assets/img/LOGO.png" alt=".hack logo"></div>
+                        <div class="logo"><img src="assets/img/LOGO.png" alt=".hack logo"></div>
+                    </div>
