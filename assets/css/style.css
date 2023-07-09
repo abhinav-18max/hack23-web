@@ -535,7 +535,6 @@ section {
   margin-top: -2px;
   position: relative;
 }
-
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 20px;
@@ -553,7 +552,6 @@ section {
     margin: 0-50px 0 35px;
    }
 }
-
 .resume .resume-item h5 {
   font-size: 16px;
   background: #f7f8f9;
@@ -563,8 +561,6 @@ section {
   font-family: "Poppins", sans-serif;
   margin-bottom: 10px;
 }
-
-
 .resume .resume-item:last-child {
   padding-bottom: 10px;
 }
@@ -580,7 +576,7 @@ section {
   height: 100px;
   background:  #02EC97;
   top: 0%;
-  left:22.5%;
+  left:28%;
   z-index: 2;
   margin-left: -10px;
   animation: name 5s linear forwards;
@@ -599,7 +595,6 @@ section {
   width: 14px;
   height: 14px;
   border-radius: 50px;
-  left: 20.25%;
   top: -3px;
   z-index: 2;
   background:  #02EC97 ;
@@ -616,7 +611,7 @@ section {
 @keyframes movedown{
   0%{
     opacity: 1;
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   100%{
     opacity: 1;
@@ -646,23 +641,122 @@ section {
   background:  #02EC97;
   position: relative;
   border-radius: 6px;
-  left: 50%;
+  left: 60%;
 }
-@media (max-width: 768px) {
-  .resume .timeline::after{
-    left: 20px;
-  }
+@media (min-width: 1400px) {
   .resume .timeline::before{
-    left: 5px;
-    z-index: 2;
-    top: 1px;
+    left: 26.75%;
+  }
+}  
+@media(min-width:1200px) and (max-width:1399px) {
+  .resume .timeline::before{
+    left: 26.5%;
+  }
+}
+@media(min-width:991px) and (max-width:1199px) {
+  .resume .timeline::before{
+    left: 26.25%;
+  }
+}
+@media(min-width:768px) and (max-width:991px) {
+  .resume .timeline::before{
+    left: 25.75%;
+}
+}
+@media(min-width:555px) and (max-width:767px) {
+  .resume .timeline::before{
+    left: 25%;
   }
   .resume .text-box{
     width: 225px;
   }
-
-  
 }
+@media(min-width:515px) and (max-width:554px) {
+  .resume .timeline::before{
+    left: 24.75%;
+  }
+  .resume .text-box{
+    width: 225px;
+  }
+}
+@media(min-width:448px) and (max-width:514px) {
+  .resume .timeline::before{
+    left: 24.6%;  
+  }
+  .resume .text-box{
+    width: 225px;
+  }
+}
+@media(min-width:425px) and (max-width:447px) {
+  .resume .timeline::before{
+    left: 24%;  
+  }
+  .resume .text-box{
+    width: 225px;
+  }
+}
+@media(min-width:400px) and (max-width:424px) {
+  .resume .timeline::before{
+    left: 16%;  
+  }
+  .resume .timeline::after{
+    left: 20%;
+  }
+  .resume .text-box{
+    left: 50%;
+    width: 225px;
+  }
+}
+@media(min-width:375px) and (max-width:399px) {
+  .resume .timeline::before{
+    left: 15.75%;  
+  }
+  .resume .timeline::after{
+    left: 20%;
+  }
+  .resume .text-box{
+    left: 50%;
+    width: 225px;
+  }
+}
+@media(min-width:347px) and (max-width:374px) {
+  .resume .timeline::before{
+    left: 15.4%;  
+  }
+  .resume .timeline::after{
+    left: 20%;
+  }
+  .resume .text-box{
+    left: 50%;
+    width: 225px;
+  }
+}
+@media(min-width:320px) and (max-width:346px) {
+  .resume .timeline::before{
+    left: 15%;  
+  }
+  .resume .timeline::after{
+    left: 20%;
+  }
+  .resume .text-box{
+    left: 40%;
+    width: 225px;
+  }
+}
+@media(max-width:319px) {
+  .resume .timeline::before{
+    left: 14.25%;  
+  }
+  .resume .timeline::after{
+    left: 20%;
+  }
+  .resume .text-box{
+    left: 40%;
+    width: 175px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
