@@ -1,17 +1,13 @@
-/**
-* Template Name: MyResume
-* Updated: Jun 13 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  /* color: #272829; */
+  color: #a1fd56;
+  background-color: black;
 }
 
 a {
@@ -401,10 +397,116 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+h1{
+  color: white;
+  size: 10vw;
+
+}
+.para{
+  align-content:center;
+}
+
+.container h1{	
+	margin:0px;	
+	font-size: 2vw;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 4s steps(22,end) forwards,
+            blink 8s infinite alternate ;
+}
+.container h6{	
+	margin:0px;	
+	font-size: 2vw;
+  white-space:nowrap;
+  overflow:visible;
+  animation:typing 4s steps(22,end) forwards,
+            blink 8s infinite alternate ;
+}
+@keyframes typing{
+	0%{width: 0%;}
+	100%{width: 100%;}
+}
+@keyframes blink{
+	0%, 100%{
+		border-right: 2px solid transparent;
+	}
+	50%{
+		border-right: 2px solid #fff;
+	}
+}
+
+.wrapper span {
+	position: fixed;
+	bottom: -180px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #068d28;
+	box-shadow: 0 0 50px #107407, 0 0 100px #198802, 0 0 150px #026807, 0 0 200px #00501b;
+	animation: animate 10s linear infinite;
+}
+.wrapper span:nth-child(1) {
+	left: 90%;
+	animation-delay: 0.6s;
+}
+.wrapper span:nth-child(2) {
+	left: 85%;
+	animation-delay: 8s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 10%;
+	animation-delay: 2s;
+}
+.wrapper span:nth-child(4) {
+	left: 90%;
+	animation-delay: 6s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 5%;
+	animation-delay: 0.2s;
+}
+.wrapper span:nth-child(6) {
+	left: 85%;
+	animation-delay: 0.9s;
+}
+.wrapper span:nth-child(7) {
+	left: 950%;
+	animation-delay: 4s;
+	width: 100px;
+	height: 100px;
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+
+
 .about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+  font-weight: bolder;
+  font-size: 6vw;
+  color: #fdfdfd;
 }
 
 .about .content ul {
@@ -425,13 +527,55 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #0563bb;
+  color: #06ff44;
   line-height: 0;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
 }
+.about .count-box {
+  padding: 30px 30px 25px 30px;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.about .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #03f817;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.about.count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #011426;
+}
+
+.facts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.heading{
+  color: black;
+}
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -515,7 +659,7 @@ section {
 # Resume
 --------------------------------------------------------------*/
 .resume {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
 }
 .resume .section-title h2 {
   color: rgba(0, 0, 0, 0.993);
@@ -602,7 +746,7 @@ section {
 }
 .resume .resume-container{
   padding: 10px 25px;
-  background: #FFFFFF;
+  /* background: #FFFFFF; */
   position: relative;
   width: 50%;
   animation: movedown 1s linear forwards;
@@ -1003,19 +1147,34 @@ section {
 .Tracks{
   height: 100vh;
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
   /* background: #212f2d; */
 }
+.Tracks .section-title{
+  /* margin-bottom:40px; */
+}
 
+.Tracks .section-title h2 {
+  color: rgba(0, 0, 0, 0.993);
+}
+.Tracks .section-title h2::after{
+  background: rgba(0, 0, 0, 0.993);
+}
 
+.outer{
+  margin-top: 200px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .main {
   width: 83%;
   height: 70%;
   width: 23vh;
   height: 30vh;
-  position: absolute;
+  position:relative;
+  
 }
 
 .heading
@@ -1575,10 +1734,20 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.footer-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #297904;
+}
 #footer {
-  background: #f7f8f9;
-  color: #45505b;
+  /* background: #f7f8f9; */
+  color: #004211;
   font-size: 14px;
+  font-weight: bolder;
   text-align: center;
   padding: 30px 0;
 }
@@ -1606,7 +1775,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0563bb;
+  background: #000000;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1619,8 +1788,8 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
-  color: #fff;
+  background: #00ff15;
+  color: #000000;
   text-decoration: none;
 }
 
