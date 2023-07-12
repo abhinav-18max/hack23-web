@@ -233,9 +233,9 @@
   });
 
   /**
-   * Testimonials slider
+   * Sponosors slider
    */
-  new Swiper('.testimonials-slider', {
+  new Swiper('.sponsors-slider', {
     speed: 600,
     loop: true,
     autoplay: {
