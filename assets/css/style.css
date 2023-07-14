@@ -84,7 +84,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  border: 6px solid #06ff44;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -1126,23 +1126,6 @@ h1{
 /* ----------------------------------------------------- 
 #Tracks
 -------------------------------------------------------*/
-/* .tracks-gradient{
-  width: 17rem;
-  height: 17rem;
-  border-radius: 50%;
-  background: #21403a;
-  position: relative;
-  display: inline-block;
-  box-shadow: 0 0 20px 16px #21403a;
-}
-.ellipse-1{
-  top: 25rem;
-  left: 3rem;
-}
-.ellipse-2{
-  top: 40rem;
-  left: 50rem;
-} */
 
 .Tracks{
   height: 100vh;
@@ -1182,7 +1165,7 @@ h1{
   justify-content: center;
   align-items: center;
   position: absolute;
-  background: linear-gradient(180deg, rgb(51, 125, 47) 0%, rgb(217, 217, 217) 100%);
+  background: linear-gradient(180deg, #06ff44 0%, rgb(217, 217, 217) 100%);
 }
 
 
@@ -1203,6 +1186,7 @@ h1{
 #c1{
   z-index: 3;
   box-shadow: 0 10px 50px #23232333;
+  transition: all 0.3s ease-in-out 0.3s;
 }
 #c2,#c3,#c4,#c5{
   z-index: 1;
@@ -1214,28 +1198,29 @@ h1{
 }
 #c3{
   transition-property: transform;
-  transition-delay: 1.3s;
+  transition-delay: 0.3s;
   transition-duration: 0.3s;
 }
 #c4{
   transition-property: transform;
-  transition-delay: 0.8s;
-  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  transition-duration: 0.6s;
 }
 #c5{
   transition-property: transform;
-  transition-delay: 1.8s;
-  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  transition-duration: 0.6s;
 }
 
 
-.card:hover {
-  box-shadow: 0 10px 50px #23232333;
+.card:hover .card{
+  scale: 2px 2px;
 }
-
 
 .main:hover #c1 {
   transform: translateX(0px);
+  box-shadow: 0 5px 30px #06ff44;
+  background: linear-gradient(180deg, #04B22F 0%, rgb(217, 217, 217) 100%);
 }
 
 .main:hover #c2 {
@@ -1247,20 +1232,23 @@ h1{
 }
 
 .main:hover #c4 {
-  transform: translateY(31vh);
+  transform: translateX(48vh);
 }
 
 .main:hover #c5 {
-  transform: translateY(-31vh);
+  transform: translateX(-48vh);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
   .main:hover #c1,.main:hover #c2,.main:hover #c3,.main:hover #c4,.main:hover #c5 {
     transform: translateX(0px);
     transform: translateY(0px);
   }
   .Tracks{
     display: block;
+  }
+  .outer{
+    margin-top: 0;
   }
   .main{
     height: 75vh;
