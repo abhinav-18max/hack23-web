@@ -482,24 +482,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-h1 {
+/* h1 {
   color: white;
   size: 10vw;
-}
-.para {
-  align-content: center;
-}
-
-.about .container h1 {
-  margin: 0px;
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(22, end) forwards, blink 8s infinite alternate;
-}
-.container h6 {
-  margin: 0px;
-  font-size: 18px;
+} */
+.About-head h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
   white-space: nowrap;
   overflow: visible;
   animation: typing 4s steps(22, end) forwards, blink 8s infinite alternate;
@@ -521,6 +510,84 @@ h1 {
     border-right: 2px solid #fff;
   }
 }
+.About-head h6 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(22, end) forwards, blink 8s infinite alternate;
+}
+
+.About-content{
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 426px) {
+  .About-head h3{
+    font-size: 1.5rem;
+    padding: 0 0 10px;
+  }
+  .About-head h6{
+    width: 90dvw;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .About-content{
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+.whats-new-row{
+  width: 100dvw;
+  padding: 30px 20px;
+}
+
+.whats-new{
+  background-color: #125a22;
+  border-radius: 10px;
+  padding: 20px 15px 10px;
+  height: 65dvh;
+  overflow-wrap: hidden;
+}
+
+.whats-new i{
+  position: relative;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  background: #026807;
+  color: #ffffff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+.whats-new-head{
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.whats-new-body{
+  color: #fff;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+
+@media screen and (max-width:768px){
+  .whats-new{
+    height: fit-content;
+  }
+}
+
 
 .wrapper span {
   position: fixed;
@@ -588,7 +655,7 @@ h1 {
     opacity: 0;
   }
 }
-
+/* 
 .about .content h3 {
   font-weight: bolder;
   font-size: 6vw;
@@ -620,7 +687,10 @@ h1 {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
 .about .count-box {
+  height: 62dvh;
+  width: 25dvw;
   padding: 30px 30px 25px 30px;
   margin-top: 30px;
   width: 100%;
@@ -860,6 +930,9 @@ h1 {
 }
 .resume .resume-container:nth-child(6) {
   animation-delay: 5s;
+}
+.resume .resume-container:nth-child(7) {
+  animation-delay: 6s;
 }
 .resume .text-box {
   padding: 20px 30px;
@@ -1216,10 +1289,12 @@ h1 {
 .Tracks {
   height: 100vh;
   margin-bottom: 20px;
+  transform: scale(1);
+  transition-duration: 150ms;
 
   /* background: #212f2d; */
 }
-.outer {
+.theme {
   margin-top: 200px;
   display: flex;
   justify-content: center;
@@ -1244,7 +1319,6 @@ h1 {
   padding: 2rem 1.5rem;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -1269,7 +1343,8 @@ h1 {
 #c1 {
   z-index: 3;
   box-shadow: 0 10px 50px #23232333;
-  transition: all 0.3s ease-in-out 0.3s;
+  transition: box-shadow 0.3s ease-in-out 0.3s;
+  transition: background 0s ease-in-out 0s;
 }
 #c2,
 #c3,
@@ -1281,21 +1356,25 @@ h1 {
   transition-property: transform;
   transition-delay: 0.3s;
   transition-duration: 0.3s;
+  margin-right: 3px;
 }
 #c3 {
   transition-property: transform;
   transition-delay: 0.3s;
   transition-duration: 0.3s;
+  margin-left: 3px;
 }
 #c4 {
   transition-property: transform;
   transition-delay: 0.3s;
   transition-duration: 0.6s;
+  margin-right: 3px;
 }
 #c5 {
   transition-property: transform;
   transition-delay: 0.3s;
   transition-duration: 0.6s;
+  margin-left: 3px;
 }
 
 .card:hover .card {
@@ -1305,7 +1384,8 @@ h1 {
 .main:hover #c1 {
   transform: translateX(0px);
   box-shadow: 0 5px 30px #06ff44;
-  background: linear-gradient(180deg, #04b22f 0%, rgb(217, 217, 217) 100%);
+  background: radial-gradient(#d9d9d9, #04b22f 90%);
+  /* background: radial-gradient(180deg, #04b22f 0%, #d9d9d9 100%); */
 }
 
 .main:hover #c2 {
@@ -1336,29 +1416,30 @@ h1 {
   .Tracks {
     display: block;
   }
-  .outer {
+  .theme {
     margin-top: 0;
   }
   .main {
     height: 75vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
   }
-  .heading {
-    display: block;
-    text-align: center;
-  }
+
   #c1 {
     display: none;
   }
   .cards {
+    width: 41vh;
     display: grid;
-    grid-template-columns: repeat(2, 150px);
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    overflow: visible;
   }
   .card {
+    width: 20vh;
+    height: 25vh;
     position: unset;
   }
 }
@@ -1373,7 +1454,7 @@ h1 {
   align-items: center;
 }
 .prize-card {
-  width: 65vw;
+  width: 77vw;
   height: 55vh;
   color: white;
   display: grid;
@@ -1405,6 +1486,12 @@ h1 {
   margin: 0;
   padding: 10px;
   cursor: default;
+}
+@media screen and (max-width:425px) {
+  .item h4,
+  .item p {
+    font-weight: 600;
+  }
 }
 
 .item h4 {
