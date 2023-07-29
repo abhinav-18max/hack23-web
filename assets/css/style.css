@@ -123,7 +123,7 @@ h6 {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
-  padding-top: 65%;
+  /* padding-top: 65%; */
 }
 }
 @media (max-width: 991px) {
@@ -135,11 +135,6 @@ h6 {
   }
 }
 
-@media (min-width: 991px) {
-  #main {
-    margin-left: 100px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -148,6 +143,9 @@ h6 {
 * Desktop Navigation 
 */
 @media (max-width:991px){
+#header{
+  height: 100dvh;
+}
 .navbar {
   padding: 0;
   display: block;
@@ -222,29 +220,38 @@ h6 {
 }
 @media (min-width: 1500px) {
   #header{
-    padding-left: 0.1%;
-    padding-right: 12%;
+    /* padding-left: 0.1%;
+    padding-right: 12%; */
     margin-top: 0%;
     margin-bottom: 35%;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
   }
   .navbar{
     background: #021327c4;
-    top: 0;
+    top: 15px;
     height: 80px;
-    width: 100%;
+    width: fit-content;
     border-radius: 25px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
   }
   .navbar ul{
     float: right;
-    margin-right: 20px;
+    height: 100%;
+    /* margin-right: 20px; */
   }
   .navbar ul li{
     display: inline-block;
-    line-height: 80px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    line-height: 55px;
     margin: 0 5px;
   }
   .navbar ul li a {
@@ -253,6 +260,7 @@ h6 {
     padding: 5px 50px;
     border-radius: 3px;
     text-transform: uppercase;
+    height: 100%;
   }
   .navbar ul li i {
     visibility: hidden;
@@ -267,22 +275,28 @@ h6 {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar{
     background: #021327c4;
-    top: 0;
+    position: relative;
+    top: 100px;
     height: 70px;
-    width: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
     border-radius: 25px;
   }
   .navbar ul{
-    float: right;
-    margin-right: 20px;
+    /* float: right; */
+    height: 100%;
+    /* margin-right: 20px; */
   }
   .navbar ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 50px;
     margin: 0 5px;
   }
   .navbar ul li a {
@@ -344,22 +358,23 @@ h6 {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
   }
   .navbar{
     background: #021327c4;
-    top: 0;
+    top: 65px;
     height: 70px;
-    width: 100%;
+    width: fit-content;
     border-radius: 25px;
   }
   .navbar ul{
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
   .navbar ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 50px;
     margin: 0 5px;
   }
   .navbar ul li a {
@@ -441,9 +456,9 @@ h6 {
   }
 }
 @media (min-width: 992px) {
-  #hero {
+  /* #hero {
     padding-left: 160px;
-  }
+  } */
 }
 @media (max-width: 425px) {
   .hero-clip {
@@ -635,6 +650,7 @@ section {
   size: 10vw;
 } */
 .About-head h3 {
+  width: fit-content;
   font-size: 2.5rem;
   font-weight: bold;
   white-space: nowrap;
@@ -649,7 +665,7 @@ section {
     width: 100%;
   }
 }
-@keyframes blink {
+/* @keyframes blink {
   0%,
   100% {
     border-right: 2px solid transparent;
@@ -657,8 +673,9 @@ section {
   50% {
     border-right: 2px solid #fff;
   }
-}
+} */
 .About-head h6 {
+  width: fit-content;
   font-weight: 500;
   font-size: 1.5rem;
   white-space: nowrap;
@@ -979,12 +996,13 @@ section {
 }
 .resume .resume-item h4 {
   line-height: 18px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 23px;
+  line-height: 22px;
+  font-weight: bolder;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: rgba(0, 0, 0, 0.993);
-  margin-bottom: 10px;
+  margin: 10px 0;
   overflow: hidden;
   animation: typing 5s linear forwards;
 }
@@ -999,9 +1017,9 @@ section {
   background: #02ec97;
   color: rgba(0, 0, 0, 0.993);
   display: inline-block;
-  font-weight: 600;
+  font-weight: 650;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .resume .resume-item:last-child {
   padding-bottom: 10px;
