@@ -720,7 +720,7 @@ section {
   backdrop-filter: blur(51.5px);
   border-radius: 10px;
   padding: 20px 15px 10px;
-  height: 45dvh;
+  height: 50vh;
   overflow-wrap: hidden;
 }
 
@@ -1463,15 +1463,15 @@ section {
 -------------------------------------------------------*/
 
 .Tracks {
-  height: 100vh;
-  margin-bottom: 20px;
+  height: 100dvh;
+  /* margin-bottom: 20px; */
   transform: scale(1);
   transition-duration: 150ms;
 
   /* background: #212f2d; */
 }
 .theme {
-  margin-top: 200px;
+  /* margin-top: 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1480,7 +1480,7 @@ section {
   width: 83%;
   height: 70%;
   width: 23vh;
-  height: 30vh;
+  /* height: 30vh; */
   position: relative;
 }
 
