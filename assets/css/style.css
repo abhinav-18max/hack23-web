@@ -712,10 +712,15 @@ section {
 }
 
 .whats-new{
-  background-color: #125a22;
+  background: linear-gradient(
+    136deg,
+    rgba(0, 188, 119, 0.803) 0%,
+    rgba(2, 236, 150, 0.541) 67.5%
+  );
+  backdrop-filter: blur(51.5px);
   border-radius: 10px;
   padding: 20px 15px 10px;
-  height: 65dvh;
+  height: 45dvh;
   overflow-wrap: hidden;
 }
 
@@ -746,7 +751,11 @@ section {
   font-size: 1rem;
   text-align: justify;
 }
-
+.whats-new:hover{
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+}
 
 @media screen and (max-width:768px){
   .whats-new{
