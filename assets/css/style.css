@@ -757,7 +757,7 @@ section {
   transform: scale(0.95);
   transition: all 0.3s;
 }
-}
+
 
 @media screen and (max-width:768px){
   .whats-new{
@@ -1465,7 +1465,7 @@ section {
 -------------------------------------------------------*/
 
 .Tracks {
-  height: 100dvh;
+  height: 60dvh;
   /* margin-bottom: 20px; */
   transform: scale(1);
   transition-duration: 150ms;
@@ -1478,16 +1478,21 @@ section {
   justify-content: center;
   align-items: center;
 }
-.main {
+/* .main {
   width: 83%;
   height: 70%;
   width: 23vh;
-  /* height: 30vh; */
   position: relative;
-}
+} */
 
 .heading {
   display: none;
+}
+
+.cards{
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
 }
 
 .card {
@@ -1499,8 +1504,20 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  background: #02ec97;
+  border-radius: 10px;
+  background: linear-gradient(to right top, #11998e, #00af94, #00c593, #00da8b, #38ef7d);
+  /* background: #02ec97; */
+  /* position: absolute; */
+  margin: 10px;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover>.card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
 }
 
 .card-info {
@@ -1518,7 +1535,11 @@ section {
   font-size: 3vh;
   cursor: default;
 }
-#c1 {
+
+.card:hover .card {
+  scale: 2px 2px;
+}
+/* #c1 {
   z-index: 3;
   box-shadow: 0 10px 50px #23232333;
   transition: box-shadow 0.3s ease-in-out 0.3s;
@@ -1553,17 +1574,13 @@ section {
   transition-delay: 0.3s;
   transition-duration: 0.6s;
   margin-left: 3px;
-}
+} */
 
-.card:hover .card {
-  scale: 2px 2px;
-}
 
-.main:hover #c1 {
+/* .main:hover #c1 {
   transform: translateX(0px);
   box-shadow: 0 5px 30px #06ff44;
   background: radial-gradient(#d9d9d9, #04b22f 90%);
-  /* background: radial-gradient(180deg, #04b22f 0%, #d9d9d9 100%); */
 }
 
 .main:hover #c2 {
@@ -1580,7 +1597,7 @@ section {
 
 .main:hover #c5 {
   transform: translateX(-48vh);
-}
+} */
 
 @media screen and (max-width: 768px) {
   .main:hover #c1,
@@ -1593,6 +1610,7 @@ section {
   }
   .Tracks {
     display: block;
+    height: 100dvh;
   }
   .theme {
     margin-top: 0;
@@ -1603,6 +1621,10 @@ section {
     display: grid;
     place-items: center;
   }
+
+    .cards:hover>.card:not(:hover) {
+      filter: blur(0);
+    }
 
   #c1 {
     display: none;
