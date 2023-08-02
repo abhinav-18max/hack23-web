@@ -1924,6 +1924,13 @@ section {
   color: #111;
 }
 
+.letter-spacing {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+
 .sponsors .swiper-pagination {
   margin-top: 20px;
   position: relative;
