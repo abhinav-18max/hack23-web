@@ -660,6 +660,7 @@ section {
   font-weight: bold;
   white-space: nowrap;
   overflow: visible;
+  
   animation: typing 4s steps(22, end) forwards, blink 8s infinite alternate;
 }
 @keyframes typing {
@@ -695,7 +696,8 @@ section {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5rem;
-}
+  text-align: justify;
+  }
 
 @media screen and (max-width: 426px) {
   .About-head h3{
@@ -717,11 +719,11 @@ section {
   width: 100dvw;
   padding: 30px 20px;
   display: flex;
-        flex-direction: column;
+        flex-direction:row;
         align-items: center;
-        justify-content: center;
-        height: 100vh;
-        padding: 0 20px; 
+        justify-content:left;
+        /* height: 100dvh; */
+        /* padding: 0 20px;  */
 }
 
 .whats-new{
@@ -732,7 +734,6 @@ section {
   );
   backdrop-filter: blur(51.5px);
   border-radius: 10px;
-  
   padding: 20px 15px 10px;
   height: auto;
   overflow-wrap: hidden;
