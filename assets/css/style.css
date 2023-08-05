@@ -686,10 +686,7 @@ section {
   white-space: nowrap;
   overflow: hidden;
   animation: typing 4s steps(22, end) forwards, blink 8s infinite alternate;
- 
-  
-    align-items: center;
-    justify-content: center;
+
    
 
 }
