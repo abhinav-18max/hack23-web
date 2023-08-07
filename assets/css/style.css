@@ -1473,8 +1473,8 @@ section {
 -------------------------------------------------------*/
 
 .Tracks {
-  height: 60dvh;
-  /* margin-bottom: 20px; */
+  height: 85dvh;
+  margin-bottom: -20px;
   transform: scale(1);
   transition-duration: 150ms;
 
@@ -1606,8 +1606,31 @@ section {
 .main:hover #c5 {
   transform: translateX(-48vh);
 } */
-
-@media screen and (max-width: 768px) {
+@media screen and (width:820px){
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+  }
+}
+@media screen and (width:768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+  }
+}
+@media screen and (width:912px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 660px) {
   .main:hover #c1,
   .main:hover #c2,
   .main:hover #c3,
