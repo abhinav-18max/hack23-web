@@ -761,6 +761,13 @@ section {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: justify;
+  width: 40%;
+  }
+  .about .about-pic{
+    display: flex;
+    left: 50%;
+    top: 125%;
+    position: absolute;
   }
 
 @media screen and (max-width: 426px) {
@@ -776,6 +783,12 @@ section {
   .About-content{
     font-size: 1rem;
     text-align: justify;
+    width: 100%;
+  }
+  .about .about-pic{
+    left: 0;
+    height: 150px;
+    position: relative;
   }
 }
 
@@ -1116,14 +1129,14 @@ section {
 .resume .timeline::after {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 7px;
   height: 100px;
   background: #02ec97;
   top: 0%;
-  left: 28%;
+  left: 52.5%;
   z-index: 2;
   margin-left: -10px;
-  animation: name 5s linear forwards;
+  animation: name 7s linear forwards;
 }
 @keyframes name {
   0% {
@@ -1136,11 +1149,11 @@ section {
 .resume .timeline::before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 17px;
+  height: 17px;
   border-radius: 50px;
-  top: -3px;
-  z-index: 2;
+  top: -6px;
+  z-index: 4;
   background: #02ec97;
   border: 0.1px solid #ffffff;
 }
@@ -1151,6 +1164,7 @@ section {
   width: 50%;
   animation: movedown 1s linear forwards;
   opacity: 0;
+  left: 10%;
 }
 @keyframes movedown {
   0% {
@@ -1185,62 +1199,106 @@ section {
   animation-delay: 6s;
 }
 .resume .text-box {
-  padding: 20px 25px;
+  padding: 12px 5px;
   background: #02ec97;
   position: relative;
-  border-radius: 6px;
-  left: 60%;
+  border-radius: 18px;
+  width: 400px;
+  text-align: center;
+}
+.leftbox{
+  left: 0%;
+}
+.rightbox{
+  left: 100%;
 }
 @media (min-width: 1400px) {
   .resume .timeline::before {
-    left: 26.75%;
+    left: 51.3%;
   }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .resume .timeline::before {
-    left: 26.5%;
+    left: 51.2%;
+  }
+  .resume .text-box {
+    width: 350px;
   }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
   .resume .timeline::before {
-    left: 26.25%;
+    left: 51%;
+  }
+  .resume .text-box {
+    width: 300px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .resume .timeline::before {
-    left: 25.75%;
+    left: 50.3%;
+  }
+  .resume .text-box {
+    width: 250px;
   }
 }
 @media (min-width: 555px) and (max-width: 767px) {
   .resume .timeline::before {
-    left: 25%;
+    left: 17.25%;
   }
+  .resume .timeline::after {
+    left: 20%;
+  }  
+  .resume .resume-container{
+    left:0;
+  }  
   .resume .text-box {
-    width: 225px;
+    width: 350px;
+    left: 50%;
   }
 }
 @media (min-width: 515px) and (max-width: 554px) {
   .resume .timeline::before {
-    left: 24.75%;
+    left: 17%;
   }
+  .resume .timeline::after {
+    left: 20%;
+  }  
+  .resume .resume-container{
+    left:0;
+  }  
   .resume .text-box {
-    width: 225px;
+    width: 300px;
+    left: 50%;
   }
 }
 @media (min-width: 448px) and (max-width: 514px) {
   .resume .timeline::before {
-    left: 24.6%;
+    left: 16.75%;
   }
+  .resume .timeline::after {
+    left: 20%;
+  }  
+  .resume .resume-container{
+    left:0;
+  }  
   .resume .text-box {
-    width: 225px;
+    width: 275px;
+    left: 50%;
   }
 }
 @media (min-width: 425px) and (max-width: 447px) {
   .resume .timeline::before {
-    left: 24%;
+    left: 16.5%;
+  }
+  .resume .timeline::after {
+    left: 20%;
+  }
+  .resume .resume-container{
+    left:0;
   }
   .resume .text-box {
-    width: 225px;
+    width: 250px;
+    left: 50%;
   }
 }
 @media (min-width: 400px) and (max-width: 424px) {
@@ -1250,9 +1308,12 @@ section {
   .resume .timeline::after {
     left: 20%;
   }
+  .resume .resume-container{
+    left:0;
+  }
   .resume .text-box {
     left: 50%;
-    width: 225px;
+    width: 230px;
   }
 }
 @media (min-width: 375px) and (max-width: 399px) {
@@ -1261,6 +1322,9 @@ section {
   }
   .resume .timeline::after {
     left: 20%;
+  }
+  .resume .resume-container{
+    left:0;
   }
   .resume .text-box {
     left: 50%;
@@ -1274,6 +1338,9 @@ section {
   .resume .timeline::after {
     left: 20%;
   }
+  .resume .resume-container{
+    left:0;
+  }
   .resume .text-box {
     left: 50%;
     width: 225px;
@@ -1286,6 +1353,9 @@ section {
   .resume .timeline::after {
     left: 20%;
   }
+  .resume .resume-container{
+    left:0;
+  }
   .resume .text-box {
     left: 40%;
     width: 225px;
@@ -1297,6 +1367,9 @@ section {
   }
   .resume .timeline::after {
     left: 20%;
+  }
+  .resume .resume-container{
+    left:0;
   }
   .resume .text-box {
     left: 40%;
